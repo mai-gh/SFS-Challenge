@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SFS-Challenge</title>
+    <!-- blank favicon to stop creating error when not found -->
+    <link href="data:image/x-icon;" rel="icon" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+
+    <style>
+      body {
+        width: 50%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+      }
+      table, th, td {
+        border: 1px solid black;
+        text-align:center;
+      } 
+    </style>
+
+  </head>
+  <body>
+
+    <table>
+      <thead>
+        <tr id="debtsTableHeader">
+          <th><!-- checkbox --></th>
+          <th>Creditor</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Min Payment %</th>
+          <th>Balance</th>
+        </tr>
+      </thead>
+      <tbody id="debtsTable"></tbody>
+    <table>
+
+    <div id="buttonsDiv">
+      <button type="button" id="addDebtButton">Add Debt</button>
+      <button type="button" id="removeDebtButton">Remove Debt</button>
+    </div>
+
+    <div id="checkedBalanceTotalDiv" style="background: LightBlue;">
+      <div style="float: left;"> Total: </div>
+      <div id="checkedBalanceTotal" style="float: right;">$0.00</div>
+    </div>
+    
+    <div id="rowTotalsDiv" style="display: flex; flex-direction: row; justify-content: space-evenly;">
+      <div style="display: flex; flex-direction: row;"> Total Row Count: <div id="totalRowCount">0</div></div>
+      <div style="display: flex; flex-direction: row;"> Checked Row Count: <div id="checkedRowCount">0</div></div>
+    </div>
+
+  </body>
+</html>
